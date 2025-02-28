@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="exercicio1entrega.php" method="get">
+<form action="ex1.php" method="get">
 
 <legend>nota</legend>
             <label for="nota">informe sua nota</label>

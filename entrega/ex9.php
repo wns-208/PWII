@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="exercicio1entrega.php" method="get">
+<form action="ex9.php" method="get">
 
 <legend>numeros</legend>
             <label for="numeros">informe sua numeros</label>
@@ -20,14 +20,11 @@
 
 </form>
 <?php
- if (isset($_GET['numeros'])) {
+ if (isset($_GET['numeros']) && isset ($_GET['n2']) && isse ($_GET['n3'])) {
     $numeros =$_GET['numeros'];
-
-    if (isset($_GET['n2'])) 
-        $n2 =$_GET['n2'];
-
-        if (isset($_GET['n3'])) 
-            $n3 =$_GET['n3'];
+    $n2 =$_GET['n2'];         
+    $n3 =$_GET['n3'];
+   
 
             if($numeros>=$n2 && $numeros>$n3){
                 echo 'o primeiro é maior';
