@@ -5,22 +5,23 @@
 ?>
 
 <form action="create.php" method="POST">
-<label for="username">Nome do Usuario</label>
-<input type="text" nome="username" id="username">
-<br><br>
-<label for="password" name="password" id="password">senha</label>
-<br><br>
-<button type="submit">Cadastrar</button>
+   <label for="username">Nome do Usuario</label>
+   <input type="text" name="username" id="username">
+   <br><br>
+   <label for="password">senha</label>
+   <input type="password" name="password" id="password">
+   <br><br> 
+   <button type="submit">Cadastrar</button>
 </form>
 
 <?php
+
 $username = isset($_POST['username']) ? $_POST['username'] : exit() ;
-$username = isset($_POST['password']) ? $_POST['password'] : exit() ;
+$password = isset($_POST['password']) ? $_POST['password'] : exit() ;
 
 // statement
-$stmt = $pdo->prepare('INSERT INTO usuario (id, username, password) VALUE(:id, usernme, :password)');
-$stmt -> bindParam(:id, 0);
-$stmt -> bindParam(:username, username);
-$stmt -> bindParam(:password, password);
-$stmt -> execute();
+$stmt = $pdo->prepare('INSERT INTO usuario (username, password) VALUES (:username, :password)');
+$stmt->bindParam(':username', $username);
+$stmt->bindParam(':password', $password);
+$stmt->execute();
 ?>
