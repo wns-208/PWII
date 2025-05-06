@@ -12,6 +12,8 @@ $usuarios = $stmt->fetchAll();
 <?php foreach ($usuarios as $indice => $user) { ?>
     <p>
     <strong>Nome de Heroina:</stong><?php echo $user['username']; ?>
+    <a href="">remover</a>
+    <a href="">editar</a>
    </p>
    <hr>
 <?php } ?>
