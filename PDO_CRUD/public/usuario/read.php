@@ -4,6 +4,11 @@ include '../../config/connection.php';
 $stmt = $pdo->query('SELECT * FROM usuario');
 $usuarios = $stmt->fetchAll();
 
+  if( isset($_GET['id']) ){
+    $id = $_GET['id'];
+    echo "o id $id foi removido!!!";
+  } 
+
 // echo"<pre>";
 // echo var_dump($usuarios);
 
@@ -11,8 +16,8 @@ $usuarios = $stmt->fetchAll();
 
 <?php foreach ($usuarios as $indice => $user) { ?>
     <p>
-    <strong>Nome de Heroina:</stong><?php echo $user['username']; ?>
-    <a href="">remover</a>
+    <p><strong>Nome de Heroina:</stong><?php echo $user['username']; ?></p>
+    <a href="http://localhost/PWII/PDO_CRUD/public/usuario/delete.php?id=<?php echo $user['id']; ?>">remover</a>
     <a href="">editar</a>
    </p>
    <hr>
