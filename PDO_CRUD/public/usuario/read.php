@@ -18,7 +18,7 @@ $usuarios = $stmt->fetchAll();
     <p>
     <p><strong>Nome de Heroina:</stong><?php echo $user['username']; ?></p>
     <a href="http://localhost/PWII/PDO_CRUD/public/usuario/delete.php?id=<?php echo $user['id']; ?>">remover</a>
-    <a href="">editar</a>
+    <a href="http://localhost/PWII/PDO_CRUD/public/usuario/update.php?id=<?php echo $user['id']; ?>">atualizar</a>
    </p>
    <hr>
 <?php } ?>
